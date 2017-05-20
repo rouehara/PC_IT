@@ -39,6 +39,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 
 public class CursoJavaEITClase5 {
@@ -58,10 +60,19 @@ public class CursoJavaEITClase5 {
         Set <Persona> personas = new HashSet<>();
         personas.add(new Persona("Juan", "10"));
         personas.add(new Persona("Juan", "10"));
-        personas.add(new Persona("Pedro", "10"));
+        personas.add(new Persona("Pedro", "11"));
         personas.add(new Persona("Omar", "10"));
         System.out.println(personas.size());
-        
+        for(Persona p : personas){
+            System.out.println(p);
+        }
+        SortedSet<String> ordenados = new TreeSet<>();
+        ordenados.add("b");
+        ordenados.add("z");
+        ordenados.add("a");
+        ordenados.add("c");
+        for(String l : ordenados)
+            System.out.println(l);       
        
         
 

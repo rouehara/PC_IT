@@ -18,6 +18,11 @@ public class Persona {
     }  
 
     @Override
+    public String toString() {
+        return "Persona:{" + "dni=" + dni + ", nombre=" + nombre + '}';
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;
