@@ -2,16 +2,15 @@ package cursojavaeitclase5;
 
 import java.util.Objects;
 
-public class Persona implements Comparable<Persona> {
-
+public class Persona implements Comparable<Persona>{
     private String dni;
     private String nombre;
 
     public Persona(String nombre, String dni) {
         this.dni = dni;
         this.nombre = nombre;
-    }
-
+    }  
+        
     @Override
     public String toString() {
         return "Persona:{" + "dni=" + dni + ", nombre=" + nombre + '}';
@@ -42,11 +41,13 @@ public class Persona implements Comparable<Persona> {
         return hash;
     }
 
-    public int compareTo(Persona otra) {
+    
+    public  int compareTo(Persona otra ){
         return this.dni.compareTo(otra.dni);
-
+        
     }
-
+    
+    
     public String getDni() {
         return dni;
     }
@@ -62,5 +63,7 @@ public class Persona implements Comparable<Persona> {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+    
+    
+    
 }

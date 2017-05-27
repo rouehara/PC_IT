@@ -21,11 +21,20 @@ public class Sor {
         personas.add(new Persona("Juan", "20"));
         personas.add(new Persona("Pedro", "10"));
         personas.add(new Persona("Alumno", "30"));
-        personas.add(new Persona("xxxxx", "40"));
+        personas.add(new Persona("xxxxx", "12354567"));
 
         for (Persona p : personas) {
-            System.out.println(p);
+           // System.out.println(p);
+            try {
+             //  System.out.println("string : " + p.getDni());  // USAR THIS
+                int numEntero = Integer.parseInt(p.getDni());
+                System.out.println("numero entero :" + numEntero);
+            
+            } catch (NumberFormatException e) {
+                //parseInt failed
+            }
         }
+
         /*
         Conviert un string en entero  
         try{
@@ -79,10 +88,25 @@ private static Pattern doublePattern = Pattern.compile("-?\\d+(\\.\\d*)?");
 public boolean isDouble(String string) {
     return doublePattern.matcher(string).matches();
 }
+        ***********************
+        String text = textArea.getText();
+Scanner reader = new Scanner(text).useDelimiter("\n");
+while(reader.hasNext())
+    String line = reader.next();
+
+    try{
+        Integer.parseInt(line);
+        //it worked
+    }
+    catch(NumberFormatException e){
+       //it failed
+    }
+}
+        
+        
   ******************************************************      
         
- */
-
+         */
     }
 
 }
